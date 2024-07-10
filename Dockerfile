@@ -22,8 +22,5 @@ RUN pip install -r /requirements.txt
 
 COPY ./entrypoint.sh /entrypoint.sh
 
-ENV ES_PASS=${ES_PASS}
-ENV OPENAI_API_KEY=${OPENAI_API_KEY}
-
 
 ENTRYPOINT ["./entrypoint.sh"]
