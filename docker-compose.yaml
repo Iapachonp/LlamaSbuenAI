@@ -4,6 +4,9 @@ services:
     container_name: superllama
     ports:
       - "8080:80"
+    env_file:
+      - .env 
+      - secrets.env
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - ES_PASS=${ES_PASS}
